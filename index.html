@@ -1,415 +1,485 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>#CUIDATE CUIDAME | Campaña de Salud Mental en Jóvenes</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        purpleBrand: {
-                            DEFAULT: '#7E339A',
-                            dark: '#5C2273',
-                            light: '#9B41BD',
-                            soft: '#F3E8FF'
-                        },
-                        limeBrand: {
-                            DEFAULT: '#8ECA29',
-                            dark: '#73A81D',
-                            light: '#A3E332',
-                            soft: '#F4FCE8'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        /* Forma orgánica exacta para el borde verde de la imagen hero */
-        .hero-organic-mask {
-            border-top-left-radius: 40% 50%;
-            border-bottom-left-radius: 50% 50%;
-            border-top-right-radius: 0px;
-            border-bottom-right-radius: 0px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#CUIDATE CUIDAME | Campaña de Salud Mental en Jóvenes</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        purpleBrand: {
+                            DEFAULT: '#7E339A',
+                            dark: '#5C2273',
+                            light: '#9B41BD',
+                            soft: '#F3E8FF'
+                        },
+                        limeBrand: {
+                            DEFAULT: '#8ECA29',
+                            dark: '#73A81D',
+                            light: '#A3E332',
+                            soft: '#F4FCE8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom organic border shapes similar to campaign image */
+        .organic-frame {
+            border-radius: 60% 40% 70% 30% / 40% 50% 60% 50%;
+        }
+        .organic-frame-2 {
+            border-radius: 30% 70% 50% 50% / 50% 30% 70% 50%;
+        }
+        .organic-blob {
+            border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+        }
+        .text-shadow-sm {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans antialiased selection:bg-limeBrand selection:text-purpleBrand-dark">
 
-    <!-- Header / Navbar -->
-    <header class="fixed w-full top-0 z-50 bg-purpleBrand text-white shadow-md transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                
-                <!-- Brand / Logo -->
-                <a href="#" class="flex items-center gap-3 group">
-                    <div class="flex items-center">
-                        <span class="text-xl sm:text-2xl font-black tracking-tight leading-none">#CUIDATE <span class="font-normal">CUIDAME</span></span>
-                    </div>
-                    <div class="w-10 h-10 flex items-center justify-center p-1 group-hover:scale-105 transition-transform">
-                        <img src="Imagenes/Recurso.png" alt="Logo de la campaña" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/80x80/8ECA29/5C2273?text=Logo'">
-                    </div>
-                    <div class="hidden sm:block border-l border-purple-300/30 pl-3">
-                        <span class="text-[11px] text-purple-200 leading-tight block">Campaña de consientización<br>del trastorno psicótico en jovenes</span>
-                    </div>
-                </a>
+    <!-- Header / Navbar -->
+    <header class="fixed w-full top-0 z-50 bg-purpleBrand text-white shadow-lg transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Brand / Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12  flex items-center justify-center p-2 shadow-inner group-hover:scale-105 transition-transform">
+                        <!-- Brain in Light Bulb Logo Icon matching design -->
+<!-- Brand / Logo -->
+<a href="#" class="flex items-center gap-3 group">
+  <div class="w-12 h-12 flex items-center justify-center p-2 shadow-inner group-hover:scale-105 transition-transform">
+    <img src="Imagenes/Recurso.png" alt="Logo de la campaña" class="w-full h-full object-contain">
+  </div>
+</a>
+                            <!-- Brain texture representation -->
+                            <path d="M42,32 C40,28 45,24 49,27 C52,24 58,28 55,32 C58,35 55,41 50,39 C46,42 41,38 42,32 Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="text-xl sm:text-2xl font-black tracking-wider block leading-none">#CUIDATE CUIDAME</span>
+                        <span class="text-xs text-limeBrand font-medium tracking-wide hidden sm:block">Concientización de Trastorno Psicótico</span>
+                    </div>
+                </a>
 
-                <!-- Desktop Navigation Menu -->
-                <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
-                    <a href="#inicio" class="hover:text-limeBrand transition-colors">Inicio</a>
-                    <a href="#sobre-campana" class="hover:text-limeBrand transition-colors">Sobre la Campaña</a>
-                    <a href="#informacion" class="hover:text-limeBrand transition-colors">Señales & Mitos</a>
-                    <a href="#testimonios" class="hover:text-limeBrand transition-colors">Historias</a>
-                </nav>
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold">
+                    <a href="#inicio" class="hover:text-limeBrand transition-colors py-1">Inicio</a>
+                    <a href="#sobre-campana" class="hover:text-limeBrand transition-colors py-1">Sobre la Campaña</a>
+                    <a href="#informacion" class="hover:text-limeBrand transition-colors py-1">Señales & Mitos</a>
+                    <a href="#testimonios" class="hover:text-limeBrand transition-colors py-1">Historias</a>
+                    
+                </nav>
 
-                <!-- Hotline Action Button -->
-                <div class="hidden lg:flex items-center">
-                    <a href="tel:08008884767" class="bg-limeBrand text-purpleBrand-dark hover:bg-limeBrand-light font-bold px-5 py-2 rounded-full shadow-md flex items-center gap-2 transform hover:-translate-y-0.5 transition-all text-sm">
-                        <i class="fa-solid fa-phone"></i>
-                        <span>0800-888-4767</span>
-                    </a>
-                </div>
+                <!-- Hotline Action Button -->
+                <div class="hidden lg:flex items-center">
+                    <a href="tel:08008884767" class="bg-limeBrand text-purpleBrand-dark hover:bg-limeBrand-light font-bold px-4 py-2.5 rounded-full shadow-md flex items-center gap-2 transform hover:-translate-y-0.5 transition-all">
+                        <i class="fa-solid fa-phone-volume animate-pulse"></i>
+                        <span>0800-888-4767</span>
+                    </a>
+                </div>
 
-                <!-- Mobile menu button -->
-                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none p-2 rounded-lg hover:bg-purpleBrand-dark">
-                    <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
-                </button>
-            </div>
-        </div>
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none p-2 rounded-lg hover:bg-purpleBrand-dark">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
 
-        <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-purpleBrand-dark px-4 pt-2 pb-6 space-y-3 border-t border-purpleBrand-light">
-            <a href="#inicio" class="block text-white hover:text-limeBrand font-medium py-2 mobile-link">Inicio</a>
-            <a href="#sobre-campana" class="block text-white hover:text-limeBrand font-medium py-2 mobile-link">Sobre la Campaña</a>
-            <a href="#informacion" class="block text-white hover:text-limeBrand font-medium py-2 mobile-link">Señales & Mitos</a>
-            <a href="#testimonios" class="block text-white hover:text-limeBrand font-medium py-2 mobile-link">Historias</a>
-            <div class="pt-2">
-                <a href="tel:08008884767" class="w-full bg-limeBrand text-purpleBrand-dark font-bold py-3 rounded-xl flex items-center justify-center gap-2 shadow">
-                    <i class="fa-solid fa-phone"></i>
-                    <span>Llamar al 0800-888-4767</span>
-                </a>
-            </div>
-        </div>
-    </header>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-purpleBrand-dark px-4 pt-2 pb-6 space-y-3 border-t border-purpleBrand-light">
+            <a href="#inicio" class="block text-white hover:text-limeBrand font-medium py-2">Inicio</a>
+            <a href="#sobre-campana" class="block text-white hover:text-limeBrand font-medium py-2">Sobre la Campaña</a>
+            <a href="#informacion" class="block text-white hover:text-limeBrand font-medium py-2">Señales & Mitos</a>
+            <a href="#testimonios" class="block text-white hover:text-limeBrand font-medium py-2">Historias</a>
+            <a href="#contacto" class="block text-white hover:text-limeBrand font-medium py-2">Contacto</a>
+            <div class="pt-2">
+                <a href="tel:08008884767" class="w-full bg-limeBrand text-purpleBrand-dark font-bold py-3 rounded-xl flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <span>Llamar al 0800-888-4767</span>
+                </a>
+            </div>
+        </div>
+    </header>
 
-    <!-- Main Content -->
-    <main class="mt-20">
+    <!-- Main Content -->
+    <main class="mt-20">
 
-        <!-- HERO SECTION (Actualizada según la captura) -->
-        <section id="inicio" class="relative bg-purpleBrand text-white overflow-hidden py-12 lg:py-16">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="grid md:grid-cols-12 gap-8 items-center">
-                    
-                    <!-- Hero Left Text -->
-                    <div class="md:col-span-6 space-y-6 text-center md:text-left">
-                        
-                        <!-- Badge -->
-                        <div class="inline-flex items-center gap-2 bg-purpleBrand-dark/40 border border-limeBrand/40 text-limeBrand px-4 py-1.5 rounded-full text-xs font-medium">
-                            <span>Campaña de concientización en jóvenes</span>
-                        </div>
-                        
-                        <!-- Main Title -->
-                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight uppercase">
-                            CUIDA TU SALUD<br>MENTAL
-                        </h1>
-                        
-                        <!-- Paragraph -->
-                        <p class="text-sm sm:text-base text-purple-100 max-w-lg font-normal leading-relaxed">
-                            Si necesitas ayuda o percibes cambios emocionales o de conducta en ti o alguien cercano, no dudes en comunicarte con nosotros. No estás solo.
-                        </p>
+        <!-- HERO SECTION -->
+        <section id="inicio" class="relative bg-purpleBrand text-white overflow-hidden py-16 lg:py-24">
+            <!-- Background Decorative Graphics -->
+            <div class="absolute -top-12 -right-12 w-96 h-96 bg-purpleBrand-light rounded-full opacity-30 blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-80 h-80 bg-limeBrand rounded-full opacity-10 blur-3xl pointer-events-none"></div>
 
-                        <!-- CTA Buttons -->
-                        <div class="pt-2 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                            <a href="#contacto" class="bg-limeBrand text-purpleBrand-dark hover:bg-limeBrand-light font-bold px-6 py-3 rounded-2xl shadow-md transition-all text-center flex items-center justify-center gap-2 text-sm">
-                                <i class="fa-solid fa-heart"></i>
-                                <span>Ayuda confidencial</span>
-                            </a>
-                            <a href="#informacion" class="bg-purpleBrand-dark/80 border border-purple-300/40 text-white hover:bg-purpleBrand-dark font-medium px-6 py-3 rounded-2xl transition-all text-center flex items-center justify-center gap-2 text-sm">
-                                <i class="fa-solid fa-circle-info"></i>
-                                <span>Información y Señales</span>
-                            </a>
-                        </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid md:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Hero Left Text -->
+                    <div class="md:col-span-7 space-y-6 text-center md:text-left">
+                        <div class="inline-flex items-center gap-2 bg-limeBrand/20 border border-limeBrand/40 text-limeBrand px-4 py-1.5 rounded-full text-sm font-semibold">
+                            <i class="fa-solid fa-heart"></i>
+                            <span>Campaña de concienciación en jóvenes</span>
+                        </div>
+                        
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                            #CUIDATE <span class="text-limeBrand">CUIDAME</span>
+                        </h1>
+                        
+                        <p class="text-xl sm:text-2xl font-bold text-gray-100 max-w-2xl">
+                            CUIDA TU SALUD MENTAL
+                        </p>
+                        
+                        <p class="text-base sm:text-lg text-purple-100 max-w-xl font-normal leading-relaxed">
+                            Si necesitas ayuda o percibes cambios emocionales o de conducta en ti o alguien cercano, no dudes en comunicarte con nosotras. No estás solo.
+                        </p>
 
-                        <!-- Social Media & Contact Links -->
-                        <div class="pt-6 flex flex-wrap items-center justify-center md:justify-start gap-4 text-xs text-purple-200">
-                            <a href="#" class="flex items-center gap-1.5 hover:text-limeBrand transition-colors">
-                                <i class="fa-brands fa-instagram"></i>
-                                <span>CuidateCuidameArg</span>
-                            </a>
-                            <a href="#" class="flex items-center gap-1.5 hover:text-limeBrand transition-colors">
-                                <i class="fa-brands fa-facebook-f"></i>
-                                <span>CuidatecuidameArg</span>
-                            </a>
-                            <a href="mailto:Cuidatecuidame@gmail.com" class="flex items-center gap-1.5 hover:text-limeBrand transition-colors">
-                                <i class="fa-solid fa-envelope"></i>
-                                <span>Cuidatecuidame@gmail.com</span>
-                            </a>
-                        </div>
-                    </div>
+                        <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                            <a href="#contacto" class="bg-limeBrand text-purpleBrand-dark hover:bg-limeBrand-light font-extrabold px-8 py-4 rounded-2xl shadow-lg transform hover:-translate-y-1 transition-all text-center flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-hand-holding-heart text-xl"></i>
+                                <span>Solicitar Ayuda Confidencial</span>
+                            </a>
+                            <a href="#informacion" class="bg-purpleBrand-dark border-2 border-limeBrand text-white hover:bg-purpleBrand-light font-bold px-6 py-4 rounded-2xl transition-all text-center flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-circle-info"></i>
+                                <span>Información y Señales</span>
+                            </a>
+                        </div>
 
-                    <!-- Hero Right Image Frame (Forma orgánica tipo marco verde) -->
-                    <div class="md:col-span-6 flex justify-end">
-                        <div class="relative w-full max-w-lg">
-                            <div class="p-3 bg-limeBrand rounded-[50px] rounded-tr-none shadow-2xl overflow-hidden">
-                                <img src="Imagenes/Gemini_Generated_Image_ibu1pnibu1pnibu1.jpg" alt="Jóvenes sonriendo al aire libre" class="w-full h-[380px] sm:h-[420px] object-cover rounded-[40px] rounded-tr-none" onerror="this.src='https://placehold.co/600x500/7E339A/FFFFFF?text=Grupo+de+Jovenes'">
-                            </div>
-                        </div>
-                    </div>
+                        <!-- Contact Badges Quick View -->
+                        <div class="pt-8 border-t border-purpleBrand-light/40 grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs sm:text-sm text-purple-200">
+                            <div class="flex items-center justify-center md:justify-start gap-2">
+                                <i class="fa-solid fa-phone text-limeBrand"></i>
+                                <span>0800-888-4767</span>
+                            </div>
+                            <div class="flex items-center justify-center md:justify-start gap-2">
+                                <i class="fa-brands fa-instagram text-limeBrand"></i>
+                                <span>@CuidateCuidameArg</span>
+                            </div>
+                           
+                        </div>
+                    </div>
 
-                </div>
-            </div>
-        </section>
+                    <!-- Hero Right Graphic/Image Frame -->
+                    <div class="md:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-md">
+                            <!-- Green Organic Frame Container (Matching Brochure Design) -->
+<div class="relative p-3 bg-limeBrand rounded-[40px] shadow-2xl transform rotate-1 hover:rotate-0 transition-transform duration-500">
+  <div class="relative overflow-hidden rounded-[32px] bg-purpleBrand">
+    <img src="Imagenes/Gemini_Generated_Image_ibu1pnibu1pnibu1.jpg">
 
-        <!-- SOBRE LA CAMPAÑA SECTION -->
-        <section id="sobre-campana" class="py-16 bg-white relative">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <span class="text-purpleBrand font-extrabold tracking-widest text-xs uppercase bg-purpleBrand-soft px-4 py-1.5 rounded-full">
-                        NUESTRA MISIÓNN
-                    </span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-purpleBrand-dark mt-4 mb-4">
-                        Comprender, Acompañar y Romper Miedos
-                    </h2>
-                    <p class="text-gray-500 text-sm sm:text-base leading-relaxed">
-                        El trastorno psicótico en etapas tempranas o en la juventud suele manifestarse con cambios en el pensamiento, la percepción y las emociones. Con la concientización adecuada, podemos brindar una red seguro de contención donde pedir ayuda sea visto como un acto de valentía.
-                    </p>
-                </div>
+    <!-- Overlay graphic gradient -->
+    <div class="absolute inset-0 bg-gradient-to-t from-purpleBrand-dark/80 via-transparent to-transparent flex items-end p-6">
+      <div class="text-white">
+        <p class="font-bold text-lg leading-snug">El acompañamiento temprano marca la diferencia.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-                <!-- 3 Pillars Cards -->
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-purpleBrand-soft/50 border border-purpleBrand/10 rounded-3xl p-8 transition-all hover:shadow-xl hover:border-limeBrand relative group">
-                        <div class="w-14 h-14 bg-purpleBrand text-white rounded-2xl flex items-center justify-center text-xl mb-6 shadow-md group-hover:scale-110 group-hover:bg-limeBrand group-hover:text-purpleBrand-dark transition-all">
-                            <i class="fa-solid fa-eye"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-purpleBrand-dark mb-3">Detección Temprana</h3>
-                        <p class="text-gray-600 leading-relaxed text-sm">
-                            Reconocer las primeras señales permite intervenir a tiempo, disminuyendo el impacto emocional y mejorando significativamente el bienestar y la calidad de vida.
-                        </p>
-                    </div>
+                        </div>
+                    </div>
 
-                    <div class="bg-limeBrand-soft/60 border border-limeBrand/30 rounded-3xl p-8 transition-all hover:shadow-xl hover:border-purpleBrand relative group">
-                        <div class="w-14 h-14 bg-limeBrand text-purpleBrand-dark rounded-2xl flex items-center justify-center text-xl mb-6 shadow-md group-hover:scale-110 group-hover:bg-purpleBrand group-hover:text-white transition-all">
-                            <i class="fa-solid fa-hands-clapping"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-purpleBrand-dark mb-3">Empatía y Abrazo</h3>
-                        <p class="text-gray-600 leading-relaxed text-sm">
-                            Eliminamos prejuicios y etiquetas sociales. Promovemos el autocuidado (#CUIDATE) y la responsabilidad comunitaria de velar por el otro (#CUIDAME).
-                        </p>
-                    </div>
+                </div>
+            </div>
+        </section>
 
-                    <div class="bg-purpleBrand-soft/50 border border-purpleBrand/10 rounded-3xl p-8 transition-all hover:shadow-xl hover:border-limeBrand relative group">
-                        <div class="w-14 h-14 bg-purpleBrand text-white rounded-2xl flex items-center justify-center text-xl mb-6 shadow-md group-hover:scale-110 group-hover:bg-limeBrand group-hover:text-purpleBrand-dark transition-all">
-                            <i class="fa-solid fa-comments"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-purpleBrand-dark mb-3">Red de Apoyo</h3>
-                        <p class="text-gray-600 leading-relaxed text-sm">
-                            Espacios confidenciales y accesibles con profesionales capacitados para orientar tanto al joven como a su grupo familiar o de amistades.
-                        </p>
-                    </div>
-                </div>
+        <!-- SOBRE LA CAMPAÑA SECTION -->
+        <section id="sobre-campana" class="py-20 bg-white relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-purpleBrand font-extrabold tracking-widest text-sm uppercase bg-purpleBrand-soft px-4 py-1.5 rounded-full">
+                        Nuestra Misión
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-4 mb-6">
+                        Comprender, Acompañar y Romper Miedos
+                    </h2>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        El trastorno psicótico en etapas tempranas o en la juventud suele manifestarse con cambios en el pensamiento, la percepción y las emociones. Con la concientización adecuada, podemos brindar una red seguro de contención donde pedir ayuda sea visto como un acto de valentía.
+                    </p>
+                </div>
 
-            </div>
-        </section>
+                <!-- 3 Pillars Cards with Organic Style -->
+                <div class="grid md:grid-cols-3 gap-8">
+                    
+                    <!-- Pillar 1 -->
+                    <div class="bg-purpleBrand-soft/50 border-2 border-purpleBrand/10 rounded-3xl p-8 transition-all hover:shadow-xl hover:border-limeBrand relative group">
+                        <div class="w-16 h-16 bg-purpleBrand text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-md group-hover:scale-110 group-hover:bg-limeBrand group-hover:text-purpleBrand-dark transition-all">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-purpleBrand-dark mb-3">Detección Temprana</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            Reconocer las primeras señales permite intervenir a tiempo, disminuyendo el impacto emocional y mejorando significativamente el bienestar y la calidad de vida.
+                        </p>
+                    </div>
 
-        <!-- SECCIÓN DE INFORMACIÓN Y SEÑALES -->
-        <section id="informacion" class="py-16 bg-gray-50 border-t border-b border-gray-200">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
-                <div class="text-center max-w-3xl mx-auto mb-10">
-                    <span class="text-purpleBrand font-extrabold tracking-widest text-xs uppercase bg-limeBrand-soft px-4 py-1.5 rounded-full border border-limeBrand/30">
-                        Guía e Información
-                    </span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-purpleBrand-dark mt-4">
-                        Aprende sobre la Psicosis Temprana
-                    </h2>
-                    <p class="text-gray-600 text-sm mt-2">
-                        Explora las pestañas a continuación para conocer las señales de alerta, derribar mitos y descubrir cómo ayudar.
-                    </p>
-                </div>
+                    <!-- Pillar 2 -->
+                    <div class="bg-limeBrand-soft/60 border-2 border-limeBrand/30 rounded-3xl p-8 transition-all hover:shadow-xl hover:border-purpleBrand relative group">
+                        <div class="w-16 h-16 bg-limeBrand text-purpleBrand-dark rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-md group-hover:scale-110 group-hover:bg-purpleBrand group-hover:text-white transition-all">
+                            <i class="fa-solid fa-hands-clapping"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-purpleBrand-dark mb-3">Empatía y Abrazo</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            Eliminamos prejuicios y etiquetas sociales. Promovemos el autocuidado (#CUIDATE) y la responsabilidad comunitaria de velar por el otro (#CUIDAME).
+                        </p>
+                    </div>
 
-                <!-- Tab Buttons -->
-                <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8" id="infoTabs">
-                    <button onclick="switchTab('senales')" id="tab-senales" class="tab-btn bg-purpleBrand text-white font-bold px-5 py-3 rounded-2xl shadow-md transition-all flex items-center gap-2 text-sm">
-                        <i class="fa-solid fa-triangle-exclamation text-limeBrand"></i>
-                        <span>Señales de Alerta</span>
-                    </button>
-                    <button onclick="switchTab('mitos')" id="tab-mitos" class="tab-btn bg-white text-gray-700 hover:bg-purpleBrand-soft font-bold px-5 py-3 rounded-2xl shadow-sm border border-gray-200 transition-all flex items-center gap-2 text-sm">
-                        <i class="fa-solid fa-lightbulb text-purpleBrand"></i>
-                        <span>Mitos vs Realidad</span>
-                    </button>
-                    <button onclick="switchTab('como-ayudar')" id="tab-como-ayudar" class="tab-btn bg-white text-gray-700 hover:bg-purpleBrand-soft font-bold px-5 py-3 rounded-2xl shadow-sm border border-gray-200 transition-all flex items-center gap-2 text-sm">
-                        <i class="fa-solid fa-hand-holding-heart text-purpleBrand"></i>
-                        <span>¿Cómo Acompañar?</span>
-                    </button>
-                </div>
+                    <!-- Pillar 3 -->
+                    <div class="bg-purpleBrand-soft/50 border-2 border-purpleBrand/10 rounded-3xl p-8 transition-all hover:shadow-xl hover:border-limeBrand relative group">
+                        <div class="w-16 h-16 bg-purpleBrand text-white rounded-2xl flex items-center justify-center text-2xl mb-6 shadow-md group-hover:scale-110 group-hover:bg-limeBrand group-hover:text-purpleBrand-dark transition-all">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-purpleBrand-dark mb-3">Red de Apoyo</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            Espacios confidenciales y accesibles con profesionales capacitados para orientar tanto al joven como a su grupo familiar o de amistades.
+                        </p>
+                    </div>
 
-                <!-- Tab Content Containers -->
-                <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-gray-100 min-h-[350px]">
-                    
-                    <!-- TAB 1: SEÑALES DE ALERTA -->
-                    <div id="content-senales" class="tab-content block">
-                        <h3 class="text-xl font-bold text-purpleBrand mb-4 flex items-center gap-2">
-                            <i class="fa-solid fa-bell text-limeBrand"></i>
-                            ¿Cuáles son los cambios a tener en cuenta?
-                        </h3>
-                        <p class="text-gray-600 text-sm mb-6">
-                            Un episodio psicótico no ocurre de un día para otro; suele haber señales previas en la manera de percibir la realidad o interactuar con el entorno:
-                        </p>
-                        
-                        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                            <div class="p-5 rounded-2xl bg-purpleBrand-soft/40 border border-purpleBrand/10">
-                                <div class="w-8 h-8 rounded-lg bg-purpleBrand text-limeBrand flex items-center justify-center font-bold text-sm mb-3">1</div>
-                                <h4 class="font-bold text-purpleBrand-dark text-base mb-1">Aislamiento Social</h4>
-                                <p class="text-xs text-gray-600">Retiro progresivo de amigos, familia o actividades recreativas que antes disfrutaba.</p>
-                            </div>
+                </div>
 
-                            <div class="p-5 rounded-2xl bg-purpleBrand-soft/40 border border-purpleBrand/10">
-                                <div class="w-8 h-8 rounded-lg bg-purpleBrand text-limeBrand flex items-center justify-center font-bold text-sm mb-3">2</div>
-                                <h4 class="font-bold text-purpleBrand-dark text-base mb-1">Cambios de Percepción</h4>
-                                <p class="text-xs text-gray-600">Oír, ver o sentir cosas que los demás no perciben (alucinaciones o intensidades inusuales).</p>
-                            </div>
+                <!-- Green Hands Graphic Feature Container -->
+                <div class="mt-16 bg-gradient-to-r from-purpleBrand to-purpleBrand-dark rounded-3xl overflow-hidden shadow-2xl text-white">
+                    <div class="grid md:grid-cols-2 items-center">
+                        <div class="p-8 sm:p-12 space-y-6">
+                            <span class="bg-limeBrand text-purpleBrand-dark font-black px-3 py-1 rounded-md text-xs uppercase tracking-wider">
+                                Espacio Abierto
+                            </span>
+                            <h3 class="text-2xl sm:text-3xl font-bold leading-snug">
+                                "Si necesitas ayuda no dudes en comunicarte con nosotras"
+                            </h3>
+                            <p class="text-purple-100 text-sm sm:text-base leading-relaxed">
+                                ¡Hola! Somos Agentes de Apoyo, no tengas miedo en preguntarnos, aqui no hay preguntas equivocadas ni problemas demasiado pequeños. ¡Nuestro equipo de contención está preparado para escucharte con empatía y respeto!.
+                            </p>
+                            <div class="pt-2">
+                                <a href="tel:08008884767" class="inline-flex items-center gap-3 bg-limeBrand text-purpleBrand-dark font-extrabold px-6 py-3.5 rounded-xl hover:bg-limeBrand-light transition-colors shadow-lg">
+                                    <i class="fa-solid fa-phone text-lg"></i>
+                                    <span>Línea Gratuita: 0800-888-4767</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="h-64 md:h-full min-h-[300px] relative bg-purpleBrand-dark flex items-center justify-center overflow-hidden">
+                            <!-- Image depicting supportive hug -->
+                            <img src="Imagenes/chicas.jpg" 
+                                 alt="Grupo de jóvenes unidos" 
+                                 class="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity"
+                                 onerror="this.src='https://placehold.co/800x600/7E339A/FFFFFF?text=Unidos'">
+                            <div class="absolute inset-0 bg-gradient-to-r from-purpleBrand via-transparent to-transparent"></div>
+                        </div>
+                    </div>
+                </div>
 
-                            <div class="p-5 rounded-2xl bg-purpleBrand-soft/40 border border-purpleBrand/10">
-                                <div class="w-8 h-8 rounded-lg bg-purpleBrand text-limeBrand flex items-center justify-center font-bold text-sm mb-3">3</div>
-                                <h4 class="font-bold text-purpleBrand-dark text-base mb-1">Pensamientos Inusuales</h4>
-                                <p class="text-xs text-gray-600">Creencias firmes e inamovibles pero extrañas o sospechas intensas de persecución.</p>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+        </section>
 
-                    <!-- TAB 2: MITOS VS REALIDAD -->
-                    <div id="content-mitos" class="tab-content hidden">
-                        <h3 class="text-xl font-bold text-purpleBrand mb-6 flex items-center gap-2">
-                            <i class="fa-solid fa-shield-halved text-limeBrand"></i>
-                            Derribando prejuicios y desinformación
-                        </h3>
+        <!-- SECCIÓN DE INFORMACIÓN Y SEÑALES (INTERACTIVA) -->
+        <section id="informacion" class="py-20 bg-gray-50 border-t border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <span class="text-purpleBrand font-extrabold tracking-widest text-sm uppercase bg-limeBrand-soft px-4 py-1.5 rounded-full border border-limeBrand/30">
+                        Guía e Información
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-purpleBrand-dark mt-4">
+                        Aprende sobre la Psicosis Temprana
+                    </h2>
+                    <p class="text-gray-600 mt-2">
+                        Explora las pestañas a continuación para conocer las señales de alerta, derribar mitos y descubrir cómo ayudar.
+                    </p>
+                </div>
 
-                        <div class="space-y-4">
-                            <div class="p-5 rounded-2xl border-l-4 border-red-500 bg-red-50/50">
-                                <p class="font-bold text-red-700 text-xs uppercase tracking-wide">Mito:</p>
-                                <p class="text-gray-800 font-semibold mb-2 text-sm">"La psicosis es culpa de la persona o de una debilidad de carácter."</p>
-                                <p class="font-bold text-limeBrand-dark text-xs uppercase tracking-wide">Realidad:</p>
-                                <p class="text-gray-600 text-xs">Es una condición de salud mental en la que influyen factores biológicos, genéticos y ambientales. Se trata con apoyo profesional.</p>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Tab Navigation Buttons -->
+                <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-10" id="infoTabs">
+                    <button onclick="switchTab('senales')" id="tab-senales" class="tab-btn active-tab bg-purpleBrand text-white font-bold px-5 py-3 rounded-2xl shadow-md transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-triangle-exclamation text-limeBrand"></i>
+                        <span>Señales de Alerta</span>
+                    </button>
+                    <button onclick="switchTab('mitos')" id="tab-mitos" class="tab-btn bg-white text-gray-700 hover:bg-purpleBrand-soft font-bold px-5 py-3 rounded-2xl shadow-sm border border-gray-200 transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-lightbulb text-purpleBrand"></i>
+                        <span>Mitos vs Realidad</span>
+                    </button>
+                    <button onclick="switchTab('como-ayudar')" id="tab-como-ayudar" class="tab-btn bg-white text-gray-700 hover:bg-purpleBrand-soft font-bold px-5 py-3 rounded-2xl shadow-sm border border-gray-200 transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-hand-holding-heart text-purpleBrand"></i>
+                        <span>¿Cómo Acompañar?</span>
+                    </button>
+                </div>
 
-                    <!-- TAB 3: CÓMO AYUDAR -->
-                    <div id="content-como-ayudar" class="tab-content hidden">
-                        <h3 class="text-xl font-bold text-purpleBrand mb-6 flex items-center gap-2">
-                            <i class="fa-solid fa-users text-limeBrand"></i>
-                            Guía para Amigos y Familiares
-                        </h3>
+                <!-- Tab Content Containers -->
+                <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-gray-100 min-h-[380px]">
+                    
+                    <!-- TAB 1: SEÑALES DE ALERTA -->
+                    <div id="content-senales" class="tab-content block animate-fadeIn">
+                        <h3 class="text-2xl font-bold text-purpleBrand mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-bell text-limeBrand"></i>
+                            ¿Cuáles son los cambios a tener en cuenta?
+                        </h3>
+                        <p class="text-gray-600 mb-8">
+                            Un episodio psicótico no ocurre de un día para otro; suele haber señales previas en la manera de percibir la realidad o interactuar con el entorno:
+                        </p>
+                        
+                        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="p-5 rounded-2xl bg-purpleBrand-soft/40 border border-purpleBrand/10">
+                                <div class="w-10 h-10 rounded-xl bg-purpleBrand text-limeBrand flex items-center justify-center font-bold mb-3">1</div>
+                                <h4 class="font-bold text-purpleBrand-dark text-base mb-1">Aislamiento Social</h4>
+                                <p class="text-sm text-gray-600">Retiro progresivo de amigos, familia o actividades recreativas que antes disfrutaba.</p>
+                            </div>
 
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-limeBrand-soft border border-limeBrand/40">
-                                <div class="p-3 bg-limeBrand text-purpleBrand-dark rounded-xl font-bold text-lg">
-                                    <i class="fa-solid fa-ear-listen"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-purpleBrand-dark text-sm mb-1">Escucha sin juzgar</h4>
-                                    <p class="text-xs text-gray-700">Evita discutir o invalidar lo que la persona siente o percibe.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                            <div class="p-5 rounded-2xl bg-purpleBrand-soft/40 border border-purpleBrand/10">
+                                <div class="w-10 h-10 rounded-xl bg-purpleBrand text-limeBrand flex items-center justify-center font-bold mb-3">2</div>
+                                <h4 class="font-bold text-purpleBrand-dark text-base mb-1">Cambios de Percepción</h4>
+                                <p class="text-sm text-gray-600">Oír, ver o sentir cosas que los demás no perciben (alucinaciones o intensidades inusuales).</p>
+                            </div>
 
-                </div>
+                            <div class="p-5 rounded-2xl bg-purpleBrand-soft/40 border border-purpleBrand/10">
+                                <div class="w-10 h-10 rounded-xl bg-purpleBrand text-limeBrand flex items-center justify-center font-bold mb-3">3</div>
+                                <h4 class="font-bold text-purpleBrand-dark text-base mb-1">Pensamientos Inusuales</h4>
+                                <p class="text-sm text-gray-600">Creencias firmes e inamovibles pero extrañas o sospechas intensas de persecución.</p>
+                            </div>
 
-            </div>
-        </section>
+                            <div class="p-5 rounded-2xl bg-purpleBrand-soft/40 border border-purpleBrand/10">
+                                <div class="w-10 h-10 rounded-xl bg-purpleBrand text-limeBrand flex items-center justify-center font-bold mb-3">4</div>
+                                <h4 class="font-bold text-purpleBrand-dark text-base mb-1">Dificultad de Concentración</h4>
+                                <p class="text-sm text-gray-600">Baja repentina en el rendimiento académico o laboral, o problemas para organizar las ideas.</p>
+                            </div>
 
-        <!-- SECCIÓN DE CONTACTO -->
-        <section id="contacto" class="py-16 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <span class="text-purpleBrand font-extrabold tracking-widest text-xs uppercase bg-purpleBrand-soft px-4 py-1.5 rounded-full">
-                    Comunícate
-                </span>
-                <h2 class="text-3xl font-extrabold text-gray-900 mt-4 mb-4">
-                    Estamos aquí para escucharte
-                </h2>
-                <div class="inline-flex flex-col sm:flex-row gap-4 mt-2">
-                    <a href="tel:08008884767" class="bg-purpleBrand hover:bg-purpleBrand-dark text-white font-extrabold px-8 py-3.5 rounded-2xl shadow-lg transition-all flex items-center justify-center gap-3 text-base">
-                        <i class="fa-solid fa-phone text-limeBrand"></i>
-                        <span>0800-888-4767</span>
-                    </a>
-                </div>
-            </div>
-        </section>
+                            <div class="p-5 rounded-2xl bg-purpleBrand-soft/40 border border-purpleBrand/10">
+                                <div class="w-10 h-10 rounded-xl bg-purpleBrand text-limeBrand flex items-center justify-center font-bold mb-3">5</div>
+                                <h4 class="font-bold text-purpleBrand-dark text-base mb-1">Alteraciones del Sueño</h4>
+                                <p class="text-sm text-gray-600">Insomnio severo, patrones de descanso invertidos o cambios drásticos en el estado de ánimo.</p>
+                            </div>
 
-    </main>
+                            <div class="p-5 rounded-2xl bg-purpleBrand-soft/40 border border-purpleBrand/10">
+                                <div class="w-10 h-10 rounded-xl bg-purpleBrand text-limeBrand flex items-center justify-center font-bold mb-3">6</div>
+                                <h4 class="font-bold text-purpleBrand-dark text-base mb-1">Aplanamiento Emocional</h4>
+                                <p class="text-sm text-gray-600">Dificultad para expresar o sentir emociones frente a situaciones cotidianas.</p>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Footer -->
-    <footer class="bg-purpleBrand-dark text-white py-8 border-t border-purpleBrand">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-            <div>
-                <span class="text-lg font-black block tracking-wider">#CUIDATE CUIDAME</span>
-                <p class="text-xs text-purple-200 mt-0.5">Campaña comunitaria de concientización y apoyo en salud mental.</p>
-            </div>
-            <div class="text-xs text-purple-300">
-                &copy; 2026 #CUIDATE CUIDAME. Todos los derechos reservados.
-            </div>
-        </div>
-    </footer>
+                    <!-- TAB 2: MITOS VS REALIDAD -->
+                    <div id="content-mitos" class="tab-content hidden animate-fadeIn">
+                        <h3 class="text-2xl font-bold text-purpleBrand mb-6 flex items-center gap-2">
+                            <i class="fa-solid fa-shield-halved text-limeBrand"></i>
+                            Derribando prejuicios y desinformación
+                        </h3>
 
-    <!-- JavaScript para Tabs y Menú Mobile -->
-    <script>
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
+                        <div class="space-y-4">
+                            <!-- Mito 1 -->
+                            <div class="p-5 rounded-2xl border-l-4 border-red-500 bg-red-50/50">
+                                <p class="font-bold text-red-700 text-sm uppercase tracking-wide">Mito:</p>
+                                <p class="text-gray-800 font-semibold mb-2">"La psicosis es culpa de la persona o de una debilidad de carácter."</p>
+                                <p class="font-bold text-limeBrand-dark text-sm uppercase tracking-wide">Realidad:</p>
+                                <p class="text-gray-600">Es una condición de salud mental en la que influyen factores biológicos, genéticos y ambientales. Se trata con apoyo profesional, no con fuerza de voluntad.</p>
+                            </div>
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-            menuIcon.classList.toggle('fa-bars');
-            menuIcon.classList.toggle('fa-xmark');
-        });
+                            <!-- Mito 2 -->
+                            <div class="p-5 rounded-2xl border-l-4 border-red-500 bg-red-50/50">
+                                <p class="font-bold text-red-700 text-sm uppercase tracking-wide">Mito:</p>
+                                <p class="text-gray-800 font-semibold mb-2">"Las personas con psicosis no pueden recuperarse ni llevar una vida plena."</p>
+                                <p class="font-bold text-limeBrand-dark text-sm uppercase tracking-wide">Realidad:</p>
+                                <p class="text-gray-600">Con un abordaje temprano y adecuado, la gran mayoría de los jóvenes logran continuar sus estudios, trabajar y desarrollar sus proyectos personales.</p>
+                            </div>
 
-        document.querySelectorAll('.mobile-link').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-                menuIcon.classList.remove('fa-xmark');
-                menuIcon.classList.add('fa-bars');
-            });
-        });
+                            <!-- Mito 3 -->
+                            <div class="p-5 rounded-2xl border-l-4 border-red-500 bg-red-50/50">
+                                <p class="font-bold text-red-700 text-sm uppercase tracking-wide">Mito:</p>
+                                <p class="text-gray-800 font-semibold mb-2">"Las personas que sufren trastornos psicóticos son agresivas."</p>
+                                <p class="font-bold text-limeBrand-dark text-sm uppercase tracking-wide Realidad:">Realidad:</p>
+                                <p class="text-gray-600">Las estadísticas demuestran que las personas con psicosis suelen ser víctimas de estigma o agresiones en lugar de victimarios. Sienten desorientación y miedo.</p>
+                            </div>
+                        </div>
+                    </div>
 
-        function switchTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(content => {
-                content.classList.add('hidden');
-                content.classList.remove('block');
-            });
+                    <!-- TAB 3: CÓMO AYUDAR -->
+                    <div id="content-como-ayudar" class="tab-content hidden animate-fadeIn">
+                        <h3 class="text-2xl font-bold text-purpleBrand mb-6 flex items-center gap-2">
+                            <i class="fa-solid fa-users text-limeBrand"></i>
+                            Guía para Amigos, Familiares y Compañeros
+                        </h3>
 
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('bg-purpleBrand', 'text-white', 'shadow-md');
-                btn.classList.add('bg-white', 'text-gray-700', 'shadow-sm', 'border', 'border-gray-200');
-            });
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-limeBrand-soft border border-limeBrand/40">
+                                <div class="p-3 bg-limeBrand text-purpleBrand-dark rounded-xl font-bold text-xl">
+                                    <i class="fa-solid fa-ear-listen"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-purpleBrand-dark mb-1">Escucha sin juzgar</h4>
+                                    <p class="text-sm text-gray-700">Evita discutir o invalidar lo que la persona siente o percibe, aunque para ti no tenga sentido.</p>
+                                </div>
+                            </div>
 
-            const activeContent = document.getElementById(`content-${tabId}`);
-            if(activeContent) {
-                activeContent.classList.remove('hidden');
-                activeContent.classList.add('block');
-            }
+                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-limeBrand-soft border border-limeBrand/40">
+                                <div class="p-3 bg-limeBrand text-purpleBrand-dark rounded-xl font-bold text-xl">
+                                    <i class="fa-solid fa-shield-cat"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-purpleBrand-dark mb-1">Brinda calma y seguridad</h4>
+                                    <p class="text-sm text-gray-700">Habla con tono suave y pausado. Evita lugares con sobreestimulación o confrontaciones.</p>
+                                </div>
+                            </div>
 
-            const activeBtn = document.getElementById(`tab-${tabId}`);
-            if(activeBtn) {
-                activeBtn.classList.remove('bg-white', 'text-gray-700', 'shadow-sm', 'border', 'border-gray-200');
-                activeBtn.classList.add('bg-purpleBrand', 'text-white', 'shadow-md');
-            }
-        }
-    </script>
-</body>
-</html>
+                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-limeBrand-soft border border-limeBrand/40">
+                                <div class="p-3 bg-limeBrand text-purpleBrand-dark rounded-xl font-bold text-xl">
+                                    <i class="fa-solid fa-user-doctor"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-purpleBrand-dark mb-1">Anima a buscar ayuda</h4>
+                                    <p class="text-sm text-gray-700">Acompáñale a consultar a un profesional de salud mental sin presionar de forma agresiva.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4 p-4 rounded-2xl bg-limeBrand-soft border border-limeBrand/40">
+                                <div class="p-3 bg-limeBrand text-purpleBrand-dark rounded-xl font-bold text-xl">
+                                    <i class="fa-solid fa-heart-pulse"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-purpleBrand-dark mb-1">Cuida de ti también</h4>
+                                    <p class="text-sm text-gray-700">Acompañar exige desgaste emocional. Busca contención y orientación para ti como cuidador.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- GALERÍA & TESTIMONIOS CON ESTÉTICA ORGÁNICA -->
+        <section id="testimonios" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-purpleBrand font-extrabold tracking-widest text-sm uppercase bg-purpleBrand-soft px-4 py-1.5 rounded-full">
+                        Comunidad y Acompañamiento
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-4">
+                        Voces que inspiran a buscar ayuda
+                    </h2>
+                    <p class="text-gray-600 mt-2">
+                        El primer paso es hablarlo. Conoce la visión de quienes han formado parte de la red de contención.
+                    </p>
+                </div>
+
+                <!-- Organic Cards Grid matching brochure graphics -->
+                <div class="grid md:grid-cols-3 gap-8">
+                    
+                    <!-- Card 1 -->
+                    <div c
